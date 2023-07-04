@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentPage=1;
+  currentPage=0;
   images= [
     {
       title: 'Deniz Kum Güneş',
