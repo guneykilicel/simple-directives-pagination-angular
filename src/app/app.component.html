@@ -23,6 +23,20 @@
     <img class="Img" [src]="images[currentPage].url">
   </div>
 
+  <div [ngSwitch]="currentPage">
+    <div *ngSwitchCase="0">
+      İlk Sayfadasın
+    </div>
+    <div *ngSwitchCase="1">
+      İkinci Sayfadasın
+    </div>
+    <div *ngSwitchCase="2">
+      Üçüncü Sayfadasın
+    </div>
+    <div *ngSwitchDefault>
+      Birinci, İkinci veya Üçüncü sayfada değilsin.
+    </div>
+  </div>
 </div>
 <!-- 1. Kullanım:
 [ngClass]="{active:i === currentPage}" -->
