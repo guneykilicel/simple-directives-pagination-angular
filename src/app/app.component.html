@@ -1,7 +1,9 @@
 <div class="container">
   <nav>
     <ul class="pagination paginationUI">
-      <li class="page-item" [ngClass]="{disabled:currentPage === 0}">
+      <li class="page-item"
+      [ngClass]="{disabled:currentPage === 0}"
+      >
         <a (click)="currentPage = currentPage - 1" class="page-link">Önceki</a>
       </li>
       <ng-container *ngFor="let image of images; let i = index">
@@ -19,7 +21,7 @@
   </nav>
 
   <div class="mainImg">
-    <h4 style="color:white;">{{images[currentPage].title}}</h4>
+    <h4 appFirst [backgroundColor]="'blue'" style="color:white;">{{images[currentPage].title}}</h4>
     <img class="Img" [src]="images[currentPage].url">
   </div>
 
